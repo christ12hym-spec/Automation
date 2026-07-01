@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Regression">
+	<test thread-count="5" name="Personal Loan">
+		<groups>
+			<run>
+				<include name="Smoke" /> // excude also can be used instead of include toexecute remaining all mentioned cases
+			</run>
+		</groups>
+		<classes>
+			<class name="test.Class1" />
+			<class name="test.Class2" />
+			<class name="test.Class3" />
+			<class name="test.Class4" />
+		</classes>
+	</test>
+</suite>

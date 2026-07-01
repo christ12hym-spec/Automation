@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Personal Loan" parallel = "tests" thread.count= "6"> // if personal loan noneedtoexecute then remove this test alone
+//parallel to execute the Test parallely may be sometimes to verify performance check
+//parallel executionwon't support for mobilebecaz deveice notmentioned'
+//Test output -- index html -- reprot print
+	<parameter name = "URL" value ="qaclickacademy.com"/>
+	<listeners> 
+		<listener class-name = "test.Listeners"/>
+	</listeners>
+  <test name="Personal Loan" parallel = "classes" thread-count="2"> // execute the classes parallelly
+  	<parameter name = "URL" value ="homeloan.com"/> if used here then it support only for this test
+//may be login urldifferes based on paticular test
+
+    <classes>
+      <class name="test.Class1"/>
+       <class name="test.Class2"/>
+    </classes>
+  </test>
+  
+  <test thread-count="5" name="Car Loan">
+   <parameter name = "URL" value ="carloan.com"/>
+   <parameter name ="API/UN" value = "12345"/> 
+    <classes>   
+      <class name="test.Class3">     
+     	 <methods>
+     		// <exclude name = "MobileLogin"/>  // can exclude any test cases as mentioned 
+     		 <exclude name = "Mobile.*"/>  // can exclude allTC which all start with Mobile
+     	 </methods>     
+      </class>    
+    </classes>
+  </test>
+  
+   <test thread-count="5" name="Home Loan">
+    <classes>
+       <class name="test.Class4">
+      	 	<methods>
+      		 <include name ='LoginHomeAPI'/>  //can run only mentioned TC in class 4
+       		</methods>
+      </class>
+    </classes>
+  </test>
+  
+</suite>
