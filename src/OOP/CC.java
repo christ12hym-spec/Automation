@@ -15,7 +15,7 @@ public class CC extends PC { //Inheritance  using extends keyword
 		System.out.println(SR.increment());
 	//	SuperUtility SU = new SuperUtility (3); noneecallwith singleclassusing extends
 		System.out.println(SR.multiply());
-		System.out.println("Hello");
+		System.out.println("Hello...");
 	} 
 
 	
