@@ -6,7 +6,7 @@ public class PC {
 
 	public void doThis()
 	{
-		System.out.println(" Parent class");
+		System.out.println(" Parent class Done");
 	}
 	
 	@BeforeMethod
