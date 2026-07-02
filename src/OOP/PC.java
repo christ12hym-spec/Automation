@@ -12,7 +12,7 @@ public class PC {
 	@BeforeMethod
 	public void BeforeRun() // This /All testng annotation method will execute in all child class which inherit this class even parent class properties not used
 	{
-		System.out.println("Run me first");
+		System.out.println("Run me first Test");
 	}
 
 }

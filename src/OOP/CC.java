@@ -24,4 +24,10 @@ public class CC extends PC { //Inheritance  using extends keyword
 	{
 		System.out.println(" child class");
 	} 
+	
+	@Test
+	public void RunThisTest2() 
+	{
+		System.out.println(" child2 class");
+	} 
 }
